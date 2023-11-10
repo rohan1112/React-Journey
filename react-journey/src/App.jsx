@@ -1,29 +1,18 @@
-import { useState } from "react"
+import Counter from "./Components/counter/Counter"
+import Cards from "./Components/commentSection/Cards"
+import { comments } from "./Components/commentSection/commentsData"
+import Pswd from "./Components/PasswordGenerator/PasswordGenerator"
 
 function App() {
-
-  const [counter ,setCounter]=useState(0)
-
-  function add(){
-    if(counter<20){
-      setCounter(counter+1)
-      console.log(counter)
-    }
-    
-  }
-  const remove=()=>{
-    if(counter>0){
-      setCounter(counter-1)
-      console.log(counter)
-    }
-  }
-  
-
   return (
     <>
-      <h1>Hello World</h1>
-      <button onClick={add}>Add Counter: {counter}</button>
-      <button onClick={remove}>Remove Counter: {counter}</button>
+      <Counter/>
+      <Pswd/>
+      {
+        comments.map(comment=>
+          <Cards commentObject={comment}/>
+          )
+      }
     </>
   )
 }
