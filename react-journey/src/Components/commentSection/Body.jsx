@@ -1,6 +1,6 @@
 function Body(props){
     return (
-        <p>{props.comment}</p>
+        <p className="ml-[70px]">{props.comment}</p>
     )
 }
 

@@ -2,29 +2,20 @@ import { useState } from "react"
 
 
 function Counter(){
+
     const [counter ,setCounter]=useState(0)
 
-    function add(){
-        if(counter<20){
-        setCounter(counter+1)
-        console.log(counter)
+    const add=()=>{
+        setCounter((prevCount)=>prevCount+1)
     }
     
-    }
     const remove=()=>{
-        if(counter>0){
-        setCounter(counter-1)
-        console.log(counter)
-        }
+        setCounter((prevCount)=>prevCount-1)
     }
-
-
-
-    
     return(
         <>
-            <button onClick={add}>Add Counter: {counter}</button>
-            <button onClick={remove}>Remove Counter: {counter}</button>
+            <button className="rounded-md text-white bg-green-300 w-40 h-[40px] m-2" onClick={add} >Add Counter: {counter}</button>
+            <button className="rounded-md text-white bg-green-300 w-40 h-[40px]" onClick={remove}>Remove Counter: {counter}</button>
         </>
     )
 }
