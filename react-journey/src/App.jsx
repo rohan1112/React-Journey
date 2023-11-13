@@ -3,6 +3,7 @@ import Cards from "./Components/commentSection/Cards"
 import { comments } from "./Components/commentSection/commentsData"
 import Pswd from "./Components/PasswordGenerator/PasswordGenerator"
 import ColorPicker from "./Components/colorPicker/ColorPicker"
+import GroceryCart from "./Components/groceryCart/GroceryCart"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           )
       }
       <ColorPicker/>
+      <GroceryCart/>
     </>
   )
 }
